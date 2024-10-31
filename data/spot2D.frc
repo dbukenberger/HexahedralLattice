@@ -1,0 +1,7 @@
+file spot2D.obj
+type tri
+fix d -1 -0.485
+flx r 0.415 0.25 0.1
+#flx r -0.35 0.1 0.1
+vec -1 -1
+#vec -1 1

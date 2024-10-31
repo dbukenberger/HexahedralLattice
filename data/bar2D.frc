@@ -1,0 +1,7 @@
+file bar2D.obj
+type tri
+fix d -0 -1
+flx r 1 0 0.01
+flx r 0 -0.5 0.045
+vec 1 0
+vec 0 -1

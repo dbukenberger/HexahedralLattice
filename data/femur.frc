@@ -1,0 +1,6 @@
+file femur.msh
+type tet
+fix d -2 -7.5
+#flx r 4.47838 -0.00341 4.826 1
+flx r 4 -1 6 1
+vec -1 0 -1

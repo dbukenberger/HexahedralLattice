@@ -1,0 +1,14 @@
+scikit-fem
+meshio
+numpy
+scipy
+libigl
+drbutil
+
+cupy
+pypardiso
+embreex
+trimesh
+tqdm
+mayavi
+polyscope

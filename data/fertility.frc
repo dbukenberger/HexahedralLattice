@@ -1,0 +1,5 @@
+file fertility.msh
+type tet
+fix d -1 -0.65
+flx r -0.45 0.7 0 0.15
+vec 1 -1 0

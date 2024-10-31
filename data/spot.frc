@@ -1,0 +1,7 @@
+file spot.msh
+type tet
+fix d -1 -0.65
+flx r 0 0.62 -0.51 0.2
+#flx r 0 0.2 0.75 0.2
+vec 0 -1 1
+#vec 0 -1 -1

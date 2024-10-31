@@ -1,0 +1,6 @@
+file buddha.msh
+type tet
+fix d -1 -0.475
+#flx r -0.035 0.5 -0.15 0.1
+flx r -0.045 0.45 -0.25 0.1
+vec 0 0 -2

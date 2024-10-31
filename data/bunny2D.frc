@@ -1,0 +1,8 @@
+file bunny2D.obj
+type tri
+fix d -1 -1
+#fix r 1 -0.75 0.25
+flx r -0.75 0.4 0.25
+flx r 0.75 0 0.25
+vec 0 -1
+vec 1 0

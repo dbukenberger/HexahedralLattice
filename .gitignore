@@ -1,0 +1,6 @@
+*.pyc
+*.lprof
+logs/*
+results/*
+temp/*
+

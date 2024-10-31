@@ -1,0 +1,5 @@
+file venus.msh
+type tet
+fix r 0.25 -7.254 1.5 5
+flx r -0.05 3.3 0.7 1
+vec 0 -1 0

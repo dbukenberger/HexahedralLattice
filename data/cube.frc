@@ -1,0 +1,5 @@
+file cube.msh
+type tet
+fix d -0 -1
+flx d 0 1
+vec 0 0 -1

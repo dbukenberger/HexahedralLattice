@@ -1,0 +1,5 @@
+file kitten.msh
+type tet
+fix d -1 -0.1
+flx r -0.375 8 0.975 0.75
+vec 0 -2 0
