@@ -1,6 +1,6 @@
 scikit-fem
 meshio
-numpy
+numpy==1.26.4
 scipy
 libigl
 drbutil
