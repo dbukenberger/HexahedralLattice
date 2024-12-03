@@ -157,7 +157,7 @@ class FemObject:
             else:
                 hexas = self.meshInit.t.T
                 tets = np.vstack([hexaToTetras(hexa) for hexa in hexOrderDg2BT(hexas)])
-            self.volInit = computeTetraVolumes(verts[tets]).sum()
+            self.volInit = computeTetraVolumes(verts[tets], False).sum()
         self.vol = self.volInit
             
         self.setupBoundaryMasks()
@@ -240,7 +240,7 @@ class FemObject:
             self.eType = fem.ElementHex1()
 
             hexaTets = np.vstack([hexaToTetras(hexa) for hexa in hexOrderDg2BT(self.ts)])
-            self.vol = computeTetraVolumes(self.verts[hexaTets]).sum()
+            self.vol = computeTetraVolumes(self.verts[hexaTets], False).sum()
 
         self.SJs = self.evalScaledJacobians()
         if self.SJs.max() < 0:
@@ -324,7 +324,7 @@ class FemObject:
         faces = self.meshInit.facets.T
         tets = self.meshInit.t.T
 
-        self.volInit = computeTetraVolumes(verts[tets]).sum()
+        self.volInit = computeTetraVolumes(verts[tets], False).sum()
     
         if walled:
             tau = (1 - (1 - alpha)**(1/3)) / 4
@@ -471,7 +471,7 @@ class FemObject:
         hexas = self.meshInit.t.T     
 
         hexaTets = np.vstack([hexaToTetras(hexa) for hexa in hexOrderDg2BT(hexas)])
-        self.volInit = computeTetraVolumes(verts[hexaTets]).sum()
+        self.volInit = computeTetraVolumes(verts[hexaTets], False).sum()
 
         if withVerts:
             if walled:

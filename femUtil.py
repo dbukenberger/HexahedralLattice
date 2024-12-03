@@ -311,7 +311,7 @@ def optimizeTaus(vTarget, taus, verts, cellsInit, cellsMat, mType, walled = Fals
         def f(p, *args):
             vTarget, taus, verts = args[0]
             verts = materializeTetVerts(p, taus, verts, edges, faces, cells, mType, walled)
-            vol = computeTetraVolumes(verts[hexaTets]).sum()
+            vol = computeTetraVolumes(verts[hexaTets], False).sum()
             err = abs(vTarget - vol)**2
             showProgress(vTarget, vol, err, p[0])
             return err
@@ -322,7 +322,7 @@ def optimizeTaus(vTarget, taus, verts, cellsInit, cellsMat, mType, walled = Fals
         def f(p, *args):            
             vTarget, taus, verts = args[0]
             verts = materializeHexVerts(p, taus, verts, edges, faces, cells, mType, walled)
-            vol = computeTetraVolumes(verts[hexaTets]).sum()
+            vol = computeTetraVolumes(verts[hexaTets], False).sum()
             err = abs(vTarget - vol)**2
             showProgress(vTarget, vol, err, p[0])
             return err
@@ -348,7 +348,7 @@ def computeBarycentricWeights(verts, tVerts, nDim, innerOnly = False, hullTolera
             hullVerts, hullTris = innerOnly
             windingNumbers = np.abs(igl.fast_winding_number_for_meshes(np.array(hullVerts, np.float64, order='F'), hullTris, verts))
             
-        tVols = computeTetraVolumes(tVerts)
+        tVols = computeTetraVolumes(tVerts, False)
         subTVerts = tVerts[:,[[1,2,3],[0,3,2],[0,1,3],[0,2,1]]].reshape(-1, nDim, nDim)
 
     if cupyFound: # cupy to much overhead for 2D ? 
